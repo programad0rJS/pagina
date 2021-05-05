@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>hola</title>
+</head>
+<body>
+   
+  <center><label>escriba algo</label>
+   <input type="text" id="texto">
+   <button onclick="copiarAlPortapeles();">copiar</button>
+   <script>
+       function copiarAlPortapeles(){
+           let texto = document.getElementById('texto');
+           texto.select()
+           texto.setSelectionRange(0,99999);
+           document.execCommand('copy');
+       }
+   </script> 
+      <table>
+        <tr>
+          <h1><td onclick="daniel(this)" style="cursor: pointer;">hola</td></h1>  
+        </tr>
+    </table>   
+   <textarea style="width: 100%;"></textarea> 
+    
+  
+  <script>
+           function daniel(element) {
+             var temp=document.createElement('input');
+            
+             document.getElementsByTagName('body')[0].appendChild(temp);
+              
+             temp.value=element.innerHTML;
+             
+             temp.select();
+ 
+             document.execCommand('copy');
+
+             document.getElementsByTagName('body')[0].removeChild(temp);
+         }
+   </script>
+   <script>
+       function josue(){
+           alert('hola mundo');
+       }
+   </script>
+
+   <a href="javascript:josue();">hola feos</a></center>
+</body>
+</html>

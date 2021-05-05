@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hola</title>
+</head>
+<body>
+    <img name="daniel" width="500" height="250">
+    <script>
+        window.addEventListener('load',function () {
+           console.log('hola mundo'); 
+           
+           var imagenes = [];
+           imagenes[0] = 'img/descarga.jpg';
+           imagenes[1] = 'img/38781.jpg';
+
+           var indiceImagenes = 0;
+
+           function cambiarImagenes() {
+             document.daniel.src = imagenes[indiceImagenes];
+             if (indiceImagenes < 2) {
+                indiceImagenes++;
+             }else{
+                indiceImagene = 0;
+             }
+             
+           }
+           setInterval(cambiarImagenes,1000);
+
+        });
+    </script>
+
+</body>
+</html>
